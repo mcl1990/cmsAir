@@ -1,0 +1,68 @@
+SD:
+- 720x576
+- 720x480
+DVD:
+- 740x480
+HD(720p):
+- 1280x720
+Full HD (1080p):
+- 1920x1080
+2K (UHD):
+- 2048x1080
+4K(UHDV):
+- 3840x2160
+Full 4K:
+- 4096x2160
+8K:
+- 7680x4320
+1440p:
+- 2560x1440
+
+https://datatables.net/forums/discussion/27996/how-to-display-images-column-in-datatables
+http://legacy.datatables.net/release-datatables/examples/advanced_init/row_callback.html
+
+SERIES / ANIMES:
+//Buscar series
+https://api.themoviedb.org/3/search/tv?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES&query=batman 
+//Buscar informacion de la serie
+https://api.themoviedb.org/3/tv/513?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+//Buscar informacion por temporada de la serie
+https://api.themoviedb.org/3/tv/513/season/1?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+
+PELICULAS:
+//Buscar peliculas
+https://api.themoviedb.org/3/search/movie?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES&query=batman
+//Buscar informacion de peliculas
+https://api.themoviedb.org/3/movie/268?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+
+
+https://api.themoviedb.org/3/movie/157336?api_key=48f5c3a8e871801d8ad36d4360ef1f84&append_to_response=videos
+
+
+
+
+https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/
+
+https://api.themoviedb.org/3/search/movie?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES&query=batman
+
+https://api.themoviedb.org/3/tv/513?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+
+http://storage.olimpo.link/image/external/0d9e765edb5293ef3bd12bedef553d734f88f112@60x83.jpg
+
+https://api.themoviedb.org/3/movie/268?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+
+
+https://api.themoviedb.org/3/genre/movie/list?api_key=48f5c3a8e871801d8ad36d4360ef1f84&language=es-ES
+
+/// IMAGENES
+https://gist.github.com/batuhangoksu/06bc056399d87b09243d
+https://www.c-sharpcorner.com/code/1833/convert-file-into-base64-in-javascript-using-fileapi.aspx
+https://codepen.io/AshV/pen/pjodjV
+https://es.ourcodeworld.com/articulos/leer/4/como-guardar-una-imagen-en-formato-base64-generada-con-javascript-en-el-servidor-con-php
+https://codepen.io/softwarecm/pen/CrLFE
+
+//////PELICULAS
+tr += "<tr class='bg-black'> <td class='text-center' width='50' valign='middle'><span class='input-group-addon'><input type='checkbox' class='filled-in unico' id='ig_checkbox"+[i]+"' name='checkbox' value="+resultados[i].id+" ><label for='ig_checkbox"+[i]+"'></label></span></td><td  class='text-center' width='20'><img src='https://image.tmdb.org/t/p/original"+resultados[i].poster_path+"' style='width:60px;height:100px'></td><td class='text-center' width='80'><H3>"+resultados[i].title+"</H3><H3>"+resultados[i].release_date+"</H3></td><td class='text-center' width='300'><p style='overflow:auto;height:80px;margin:0;padding:0;'>"+resultados[i].overview+"</p></td></tr>";
+
+////// SERIES
+tr += "<tr class='bg-black'> <td class='text-center' width='50' valign='middle'><span class='input-group-addon'><input type='checkbox' class='filled-in unico' id='ig_checkbox"+[i]+"' name='checkbox' value="+resultados[i].id+" ><label for='ig_checkbox"+[i]+"'></label></span></td><td  class='text-center' width='20'><img src='https://image.tmdb.org/t/p/original"+resultados[i].poster_path+"' style='width:60px;height:100px'></td><td class='text-center' width='80'><H3>"+resultados[i].title+"</H3><H3>"+resultados[i].release_date+"</H3></td><td class='text-center' width='300'><p style='overflow:auto;height:80px;margin:0;padding:0;'>"+resultados[i].overview+"</p></td></tr>";
