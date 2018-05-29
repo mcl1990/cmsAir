@@ -1,5 +1,9 @@
 @extends('layouts.links')
-@section('add-links')
+@section('titulo')
+AIRLINK
+@endsection
+@section('htmlheader')
+@parent
 <style>
 	#field {
 	margin-bottom:20px;
@@ -24,8 +28,8 @@
 </div>
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-lg-10 col-lg-offset-1">
-		<div class="card bg-black">
-			<div class="header">
+		<div class="card ">
+			<div class="header bg-black">
 				<h4>Registrar enlace</h4>
 				<ul class="header-dropdown m-r--5">
 					<li class="dropdown">
@@ -33,12 +37,12 @@
 							<i class="material-icons">more_vert</i>
 						</a>
 						<ul class="dropdown-menu pull-right">
-							<li><a href="/links">Ver todos</a></li>
+							<li><a href="{{route('aportes.index')}}">Ver todos</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<div class="body">
+			<div class="body bg-black">
 				<h3 class="card-inside-title text-center" id="titulo-pelicula"></h3>
 				<form onsubmit="enviarFormulario(event)" action="{{route('aportes.store')}}" method="POST">
 					{{csrf_field()}}
