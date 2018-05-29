@@ -62,7 +62,6 @@ class ServidorController extends Controller{
 
         $validator = Validator::make($data, [
             'servidor' => $modulo->getUniqueRule(True, $rel, 'servidor').'|string',
-            'pre_icono' => 'bail|required',
         ]);
 
         if ($validator->fails()) {
@@ -81,15 +80,7 @@ class ServidorController extends Controller{
                 $modulo->$col = $data[$col];
             }
         }
-        $modulo->icono = 'pre.jpg';
-        $modulo->save();
-        $pk = $modulo->getKey();
-        /////// GUARDADO DE IMAGEN
-        $baseFromJavascript = $data['pre_icono'];
-        $base_to_php = explode(',', $baseFromJavascript);
-        $imagen = base64_decode($base_to_php[1]);
-        file_put_contents('images/servidores/'.$pk.'.jpg', $imagen); 
-        $modulo->icono = $pk.'.jpg';
+
         $modulo->save();
 
         $clase = $modulo->getClass();
@@ -136,13 +127,8 @@ class ServidorController extends Controller{
         $rel = $modulo->getTable();
         $data = $request->all();
 
-        if($data['pre_icono'] === null){
-            $img = $modulo->icono;
-        }
-
         $validator = Validator::make($data, [
             'servidor' => $modulo->getUniqueRule(False, $rel, 'servidor').'|string',
-            'pre_icono' => 'sometimes',
         ]);
 
         if ($validator->fails()) {
@@ -162,17 +148,7 @@ class ServidorController extends Controller{
             }
         }
         
-        $pk = $modulo->getKey();
-        if($data['pre_icono'] != null){
-            /////// ACTUALIZACION DE IMAGEN
-            $baseFromJavascript = $data['pre_icono'];
-            $base_to_php = explode(',', $baseFromJavascript);
-            $imagen = base64_decode($base_to_php[1]);
-            file_put_contents('images/servidores/'.$pk.'.jpg', $imagen); 
-            $modulo->icono = $pk.'.jpg';
-        }else{
-            $modulo->icono = $img;
-        }
+        
         $modulo->save();
 
         $clase = $modulo->getClass();
