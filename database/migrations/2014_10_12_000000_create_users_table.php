@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
                 $table->integer('total_aportes')->default(0);
                 $table->integer('avatar_id')->default(1);
                 $table->rememberToken();
-                $table->timestamps();
+                // $table->timestamps();
             });
             
         }
